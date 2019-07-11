@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Show Data</title>
+
+    <meta charset="utf-8" />
+
+</head>
+
+
+
+<body>
+
+     <h1>Data!</h1>
+
+     <table>
+
+         <thead><tr><th>ID</th><th>Name</th><th>Rented</th></thead>
+        <tbody>
+         {% for mydata in Rented %}
+
+            <tr><td>{{ mydata.id }}</td><td>{{ mydata.name }}</td><td>{{ mydata.rented }}</td><</tr>
+
+         {%  endfor %}
+
+         </tbody>
+
+         </table>
+
+<br>
+
+<br>
+
+     Do you want to input some data? Press <a href="input">here</a>
+     For Map Press <a href="map">here</a>
+
+</body>
+
+</html>

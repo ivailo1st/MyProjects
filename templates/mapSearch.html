@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Map Search</title>
+</head>
+<body>
+  {% for message in get_flashed_messages(  ) %}
+     <div class=flash>
+         <h1>{{message}}</h1>
+     </div>
+   {% endfor %}
+  <form method="post" action="/search_bike">
+    <h1>Here you can search for a specific Bike path:</h1>
+        <label>The Name of the Bike:</label>
+        <input id="bikename" name="bikename" type="text" />
+        <input type="submit" value="Search">
+  </form>
+  <form method="post" action="/last_pos">
+    <h1>Or get  the last position of the bikes:</h1>
+        <input type="submit" value="Click Here">
+  </form>
+</body>
+</html>
