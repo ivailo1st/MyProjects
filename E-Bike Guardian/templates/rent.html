@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <title>Rent-O-Bikematic</title>
+</head>
+<body>
+  {% for message in get_flashed_messages(  ) %}
+  <h2>{{message}}</h2>
+  {% endfor %}
+  <h1> Select which bike to rent</h1>
+  <form method="post" action="/rent_a_bike">
+    <select name ='bikes'>
+      <option value="Spongebob">Spongebob</option>
+      <option value="Squidward">Squidward</option>
+      <option value="Mr.Krabs">Mr.Krabs</option>
+    </select>
+    <input type="submit" value="Rent">
+  </form>
+</body>
+</html>

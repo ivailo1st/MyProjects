@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Map</title>
+</head>
+<body>
+  {% for message in get_flashed_messages(  ) %}
+     <div class=flash>
+         <h1>{{message}}</h1>
+     </div>
+   {% endfor %}
+  <form method="post" action="/search_bike">
+    <h1>Here you can search for a specific Bike path:</h1>
+        <label>The Name of the Bike:</label>
+        <input id="bikename" name="bikename" type="text" />
+        <input type="submit" value="Search">
+  </form>
+  <form method="post" action="/last_pos">
+    <h1>Or get  the last position of the bikes:</h1>
+        <input type="submit" value="Click Here">
+  </form>
+  <button id='Ref' onclick="location.reload();">Refresh Page</button>
+  <script>
+  document.getElementById("Ref").style.visibility="hidden";
+  function reapear(){
+    document.getElementById("Ref").style.visibility="visible";
+  }
+  setTimeout(reapear,3000);
+  </script>
+  <div id="mapdiv"></div>
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script>
+    var maxResolution = 360/800.0;
+    var minResolution = 0.5/800.0;
+    var extent = new OpenLayers.Bounds(-180,-90,180,90);
+    var options = {restrictedExtent:extent, maxExtent:extent, wrapDateLine:false, minResolution:minResolution, maxResolution:maxResolution,controls: [new OpenLayers.Control.PanZoom()] };
+    var locationData = {
+        latitude : [{% for mydata in myIotdata %}
+                  {{ mydata.latitude }},
+              {%  endfor %}],
+        longitude : [{% for mydata in myIotdata %}
+                  {{ mydata.longitude }},
+              {%  endfor %}]
+    }
+
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+
+    var zoom=16;
+
+    var markers = new OpenLayers.Layer.Markers( "Markers" );
+
+    map.addLayer(markers);
+
+    var i;
+    for (i = 0; i < locationData.latitude.length; i++) {
+        var aarhusLat = new OpenLayers.LonLat( locationData.longitude[i], locationData.latitude[i] )
+             .transform(
+              new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+              map.getProjectionObject() // to Spherical Mercator Projection
+            );
+        markers.addMarker(new OpenLayers.Marker(aarhusLat));
+    }
+    map.setCenter (aarhusLat, zoom);
+
+  </script>
+
+</body>
+</html>
