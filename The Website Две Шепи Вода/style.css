@@ -1,0 +1,201 @@
+﻿
+#actBody {
+	width: 40%;
+	margin-left: 10%;
+	margin-right: auto;
+}
+
+/* ОБИЧАМ БАНИЧКИ С БОЗА */
+
+.body {
+	background-image: url('res/voda5.png');
+}
+
+li > a{
+	text-decoration: none;
+	color: #F2F2F2;
+	font-size: 130%;
+}
+
+li{
+	list-style: none;
+	padding-top: 30%;
+}
+/*Navigation*/
+#nav_width {
+	
+}
+
+#nav1 {
+	margin-top: 6px;
+	background-color: #6B8E23;
+	width: 35%;
+	height: 820px;
+	padding-bottom: 15px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px black;
+	float: left;
+}
+nav li a{
+	color:#E0F8F7;
+	transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	color:#DFF0EF;
+	margin-left: -15px;
+	background-color:;
+	padding: 15px;
+	border-radius: 0px;
+	font-size: 24px;
+}
+ 
+nav li a:after{
+    color:#457E87;
+	padding:10px;
+	}
+nav li a:hover {
+	transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	color:#DFF0EF;
+	margin-left: -15px;
+	background-color: #006600;
+	padding: 15px;
+	border-radius: 0px;
+}
+nav li a:active {
+	transition: background-color 0.1s ease-in-out;
+	-moz-transition: background-color 0.1s ease-in-out;
+	-webkit-transition: background-color 0.1s ease-in-out;
+	color:#DFF0EF;
+	margin-left: -15px;
+	background-color: #007700;
+	padding: 15px;
+	border-radius: 0px;
+}
+
+#clickedOn {
+	transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	color:#DFF0EF;
+	margin-left: -15px;
+	background-color: #006600;
+	padding: 15px;
+	border-radius: 0px;
+}
+
+/*Main Picture*/
+.korica {
+    box-shadow: 1px 1px 15px #8FC9C9;
+	width: 200%;
+	border-radius: 5px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+/*Posts*/
+#postove{
+	color:#23574B;
+	font-family: 'Ubuntu Mono';
+	font-style: normal;
+	font-weight: 700;
+	font-size:17px;
+	width:160%;
+	background:;
+	margin-left: 40%;
+	background-color: #e0f8f7;
+	padding: 15px;
+	padding-bottom: 150px;
+	border-radius: 10px;
+}
+
+
+/* Misc */
+
+div{
+    margin-top:50px;
+}
+.sexy_line{ 
+    display:block;
+    border:none;
+    color:#E0F8F7;
+    height:1px;
+    background:black;
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#A5C9C8), to(#E0F8F7));
+    background: -moz-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#A5C9C8), to(#E0F8F7));
+    background: gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#A5C9C8), to(#E0F8F7));
+}
+
+#gallery {
+	border: 5px solid #CADFDE;
+	width: 1000px;
+	height: 700px;
+	background-color: #e0f8f7;
+}
+
+#articles {
+	text-align: justify;
+}
+
+@media only screen and (min-width:150px) and (max-width:1621px) {
+
+	#gallery {
+		width: 750px;
+	}
+
+	@media only screen and (min-width:150px) and (max-width:1366px)
+	{
+		nav li a {
+			font-size: 20px;
+		}
+		
+		#postove {
+			font-size: 15px;
+		}
+		
+		#nav1 {
+			height: 560px;
+		}
+		
+		#gallery {
+			width: 750px;
+		}
+		
+		@media only screen and (min-width:150px) and (max-width:1187px)
+		{
+			#postove {
+				font-size:15px;
+			}
+			
+			nav li a {
+				font-size: 13px;
+			}
+			
+			#nav1 {
+				height: 500px;
+			}
+			
+			#gallery {
+				width: 700px;
+			}
+		
+			@media only screen and (min-width:150px) and (max-width:978px) {
+				#postove {
+					font-size:11px;
+				}
+				
+				nav li a {
+					font-size:12px;
+				}
+				
+				#nav1 {
+					height: 412px;
+				}
+				
+				#gallery {
+					width: 600px;
+				}
+			}
+		}
+	}
+}
