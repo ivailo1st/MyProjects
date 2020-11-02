@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="ToDo-task-wrapper">
+      <div class="face front">
+          <h2 id="FrontText">Click Here for To-Do App</h2>
+      </div>
+      <div class="face back">
+        <h2>To-Do List</h2>
+        <p> Double-click on item as to mark it as complete</p>
+        <div class="InputField">
+          <label class="checkboxContainer">Remember Text
+            <input type="checkbox" checked="checked" id="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <form name="todo-add">
+            <input type="text" id="todo-entry" placeholder="Enter an item to add"/>
+          </form>
+          <button id="button-add" class="Buttons">Add</button>
+        </div>
+        <p id="SaveText"></p>
+        <ol id="todo-list">
+        </ol>
+        <div id="controls-wrapper">
+          <button id="done-button" class="Buttons">Clear the completed tasks</button>
+          <button id="remove-button" class="Buttons">Empty the List</button>
+          <button id="save-button" class="Buttons">Save the list</button>
+        </div>
+      </div>
+    </div>
+    <div class="Weather-task-wrapper">
+      <div class="face front">
+        <h2 id="FrontText">Click Here For Weather App</h2>
+      </div>
+      <div class="face back">
+        <div class="Weather-title">
+          <h2>The Current Weather is:</h2>
+        </div>
+        <div class="Notification">
+        </div>
+        <div class="Weather-Info">
+          <div class="WeatherIcon">
+            <img src="icons/unknown.png">
+          </div>
+          <div class="TemperatureValue">
+            <p>- °<span>C</span></p>
+          </div>
+          <div class="TemperatureDesc">
+            <p> - </p>
+          </div>
+          <div class="Location">
+            <p>-</p>
+          </div>
+        </div>
+        <p class="DescOfFunc">You can click on the unit of temperature to change it between Celsius or Fahrenheit</p>
+      </div>
+    </div>
+    <div class="Tetris-wrapper">
+      <div class="face front">
+        <h2 id="FrontText">Click Here For A Tetris Game</h2>
+      </div>
+      <div class="face back">
+        <h2>Tetris Game</h2>
+            <div class="score-wrapper">
+               Score : <div id="score">0</div>
+            </div>
+           <canvas id="tetris-game" width="200" height="300"></canvas>
+           <h3 id="Pause">Press Enter To Start</h3>
+           <p id="Instructions">
+             Use 	&#x2B05; and &#x27A1; to move block left and right<br>
+             Use &#x2B06; to rotate block clockwise <br>
+             Use 	&#x2B07; to move block down faster<br>
+             Use <strong>ENTER</strong> to Pause/Unpause game
+           </p>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/tetrisFigures.js"></script>
+  <script src="scripts/tetrisGame.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
