@@ -1,0 +1,150 @@
+@import "./variables";
+/* Slick-Carousel List of items/articles*/
+.slick-list {
+  overflow: initial;
+}
+/* Main Section */
+.sliderv2 {
+  position: relative;
+  padding-top: 2.5rem;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $lg) {
+    padding-top: 10rem;
+  }
+  /* Object behind the items/articles list */
+  &:before {
+    content: "";
+    display: block;
+    background-color: $mainColor;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: 0;
+    bottom: 2.5rem;
+
+    @media screen and (min-width: $lg) {
+      border-top-left-radius: 5rem;
+      border-top-right-radius: 5rem;
+      left: 5rem;
+      right: 5rem;
+      bottom: 5rem;
+    }
+  }
+  /* The item/article */
+  .slider__main {
+    position: relative;
+    padding: 0.5rem;
+    outline: none !important;
+
+    img {
+      position: absolute;
+      top: -1rem;
+      left: 2rem;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border: 3px solid $white;
+      transition: border-color 0.25s;
+
+      @media screen and (min-width: $lg) {
+        top: -2rem;
+      }
+    }
+    /* The Currently Centered item/article */
+    &.slick-current {
+      .slider__main-content,
+      img {
+        border-color: royalblue;
+      }
+    }
+    /* Item/article content*/
+    .slider__main-content {
+      background: $white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      border: 3px solid $white;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      transition: border-color 0.25s;
+      /* Item/article header */
+      .slider__main-content-header {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        /* Item/article header text (Name,Job) */
+        .slider__main-content-header-info {
+          flex: 0 50%;
+          width: 50%;
+
+          h3,
+          p {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          h3 {
+            font-size: 1rem;
+            color: $mainColor;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 0.9rem;
+          }
+        }
+        /* Item/article stars */
+        .slider__main-content-header-stars {
+          text-align: right;
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+/* Buttons Section */
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+
+  @media screen and (min-width: $lg) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  /* Button Setup */
+  button {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.25s ease-in-out;
+    will-change: opacity;
+
+    @media screen and (min-width: $lg) {
+      margin-right: 15rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
