@@ -1,0 +1,150 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.border-top {
+  border-top: 1px solid var(--bar-bck);
+}
+.border-bottom {
+  border-bottom: 1px solid var(--bar-bck);
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid var(--dark-green);
+  background-color: transparent;
+  background: transparent;
+  border-radius: 0px;
+  width: 279px;
+}
+
+input[type="password"] {
+  border: none;
+  border-bottom: 2px solid var(--dark-green);
+  background-color: transparent;
+  background: transparent;
+  border-radius: 0px;
+  width: 279px;
+}
+input[type="password"]:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom-color: var(--dark-green);
+}
+input[type="text"]:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom-color: var(--dark-green);
+}
+
+.LOGSIG-btn {
+  background-color: var(--light-green);
+  width: 250px;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 17px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.terminate {
+  background-color: crimson;
+  text-decoration: none;
+  width: 250px;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 17px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  margin-left: 15px;
+  color: black;
+  display: block;
+}
+
+.close-btn {
+  max-width: 30px;
+  max-height: 30px;
+  position: absolute;
+  top:2%;
+  left: 83%;
+}
+
+@font-face {
+  font-family: "MONAFONT";
+  src: URL("../../MONAFONT.TTF") format("truetype");
+}
+.logo {
+  font-family: MONAFONT;
+  color: var(--dark-green);
+  font-size: 85px;
+}
+.logo-welcome {
+  font-size: 35px;
+  color: var(--dark-green);
+}
+
+.move-item {
+  margin-left: 1px;
+}
+.move-item-dlt {
+  margin-top: 115px;
+}
+.grid-item1 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.strongs {
+  font-family: Public Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--dark-green);
+}
+
+.strongs-p {
+  font-weight: normal;
+  font-size: 22px;
+  text-align: center;
+}
+
+.strongs-b {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration-line: underline;
+}
+.close-btn2 {
+    top: 60.5%;
+    width: 50px;
+    height: 60px;
+    position: fixed;
+    z-index: 2;
+    transform: scale(0.65);
+    right: 3%;
+    position: fixed;
+    z-index: 1;
+}
+
+
+.back-btn2 {
+    top: 61%;
+    width:50px;
+    left:3%;
+    height:60px;
+    position: fixed;
+    z-index: 2;
+    transform: scale(0.65);
+}

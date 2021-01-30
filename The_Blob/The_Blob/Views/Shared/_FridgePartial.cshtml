@@ -1,0 +1,31 @@
+﻿
+@model The_Blob.Models.Combiner
+
+
+
+<div id="js-fridge-element" class="fridge-element">
+ <img onclick="closeElement('fridge')" class="close-btn2" src="~/pics/icon/close.svg"/>
+
+    <strong class="fridge-name">Fridge</strong>
+    <section class="fridge-section">
+
+
+        @foreach (var item in Model.fridge)
+        {
+
+            <ul id="js-fridge-item" class="fridge-item">
+                <li id="js-fridge-quantity" class="fridge-quantity">
+                    @item.Quantity x
+                </li>
+                <li>
+                    <img onclick="updateItem(@item.FridgeId)" class="fridge-image" src="@item.ImageURL" alt="Alternate Text" />
+                </li>
+                <li class="fridge-percentage">
+                    @item.HungerPercentage %
+                </li>
+            </ul>
+        }
+
+    </section>
+    <button class="grocery-btn" onclick="openStore()"> GROCERY</button>
+</div>

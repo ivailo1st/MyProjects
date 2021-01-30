@@ -1,0 +1,15 @@
+﻿@import "https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap";
+:root {
+  --dark-green: #657b70;
+  --light-green: #bedfc4;
+  --beige: #fdf1d8;
+  --beige-transparent: #fdf1d8e8;
+  --black: #000000;
+  --white: #ffffff;
+  --red: #fb7b76;
+  --bar-bck: #bdc3c7;
+  --bar-sleep: #adc7ff;
+  --bar-hunger: #f46197;
+  --bar-fun: #4a9658;
+  --body-font: "Caveat Brush", sans-serif;
+}

@@ -1,0 +1,41 @@
+﻿@model The_Blob.Models.User
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="login-element">
+
+    <h1 class="logo">The Blob</h1>
+    <br />
+    <strong class="logo-welcome">Welcome</strong>
+    <br />
+    <form asp-action="Login">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Email" class="control-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" type="password" class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Login" class="LOGSIG-btn strongs strongs-p" />
+        </div>
+
+    </form>
+    <br />
+    <p class="strongs strongs-p">New User? <a asp-controller="Welcome" asp-action="Singup" class="strongs strongs-b">Sign Up</a> </p>
+</div>
+       
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

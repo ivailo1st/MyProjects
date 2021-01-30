@@ -1,0 +1,16 @@
+﻿@import "styles/character.css";
+@import "styles/site.css";
+@import "styles/fridge.css";
+@import "styles/store.css";
+@import "styles/topMenu.css";
+@import "styles/botMenu.css";
+@import "styles/variables.css";
+@import "styles/login.css";
+@import "styles/fun.css";
+
+.body {
+  background-color: var(--beige);
+  font-family: var(--body-font);
+  max-width:100%;
+  
+}

@@ -1,0 +1,102 @@
+﻿.topMenuComponent {
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 1fr 0.15fr 0.15fr 0.15fr 1fr;
+  font-weight: var(--body-font);
+}
+
+.topMenuComponent--userAccount {
+  justify-self: self-end;
+}
+
+.topMenuComponent--userAccount a {
+  text-decoration: none;
+}
+
+.topMenuComponent--userAccount-circleAccount {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  text-align: center;
+  background: var(--light-green);
+  border: 2px solid var(--dark-green);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#letterAccount {
+  color: var(--black);
+  font-size: 1.6rem;
+  margin-top: 1px;
+  font-weight: 500;
+  font-family: Aguafina Script;
+}
+
+.topMenuComponent--charCurrency-coin {
+  margin-left: 1px;
+}
+
+#textCurrency {
+  background-image: url(/pics/dollar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: absolute;
+  font-size: 1.6rem;
+  font-family: Aguafina Script;
+  font-weight: 500;
+}
+
+.topMenuComponent--statBars {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+}
+
+.topMenuComponent--statBars .sleep-svg,
+.topMenuComponent--statBars svg.volleyball-svg,
+.topMenuComponent--statBars .hunger-svg{
+  margin-left: 6px;
+}
+
+.topMenuComponent--statBars-bar {
+  border-radius: 0.5rem;
+  width: 1.75rem;
+  height: 5.87rem;
+  transform: rotate(180deg);
+  background-color: var(--bar-bck);
+  margin-left: 0.38rem;
+}
+
+.topMenuComponent--statBars-barImage {
+  margin-top: 55px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+  .topMenuComponent {
+    grid-template-columns: 1fr 0.45fr 0.45fr 0.45fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .topMenuComponent {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.bargrey {
+  position: relative;
+}
+
+.barfill {
+  position: absolute;
+  transform-origin: bottom;
+  animation: fill 5s;
+}
+
+@keyframes fill {
+  from {
+    transform: scaleY(0.01);
+  }
+}
