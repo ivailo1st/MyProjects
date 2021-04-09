@@ -1,0 +1,35 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: Helvetica, sans-serif;
+}
+.logo-color {
+    color: #ff7500;
+}
+.logo-bg{
+    background-color: #ff7500;
+}
+.hover\:logo-text:hover {
+    --tw-bg-opacity: 1;
+    color: #ff7500b8;
+}
+.hover\:logo-bg:hover {
+    --tw-bg-opacity: 1;
+    background-color: #ff7500b8;
+}
+.focus\:logo-bg:focus {
+    --tw-bg-opacity: 1;
+    outline: none;
+    border-color: #ff7500b8;
+    box-shadow: 0 0 5px #ff7500b8;
+}
+.focus\:logo-bg-button:focus {
+    --tw-bg-opacity: 1;
+    outline: none;
+    background: #ff7500b8;
+    border: solid 2px #ff7500b8;
+}
+.img-w-xs{
+    max-width: 3rem;
+}

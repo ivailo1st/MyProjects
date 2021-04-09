@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link rel="stylesheet" href="~/css/output.css" />
+</head>
+<body class="bg-gray-100">
+    <section class="flex flex-col justify-center w-full h-full max-w-lg mx-auto">
+        <div class="my-6">
+            <img src="~/images/SWL-logo.png" alt="Swap Language Logo" class="img-w-xs mx-auto" />
+            <h1 class="text-center text-2xl md:text-4xl font-bold py-2">Welcome to Swaplangue</h1>
+            <p class="text-center text-sm md:text-base">Create an account and start learning languages with us!</p>
+        </div>
+        <form action="https://www.google.com/" class="flex flex-col bg-white p-6 shadow-sm rounded space-y-2">
+            <label for="fullname" class="text-sm md:text-base">Full Name</label>
+            <input class="border-2 border-gray-100 hover:border-gray-300 hover:bg-gray-100 bg-white text-sm md:text-base p-2 rounded focus:logo-bg" type="text" id="fullname" name="fullname" />
+
+            <label for="email" class="text-sm md:text-base">Email</label>
+            <input class="border-2 border-gray-100 hover:border-gray-300 hover:bg-gray-100 bg-white text-sm md:text-base p-2 rounded focus:logo-bg" type="text" id="email" name="email" />
+
+            <label for="password" class="text-sm md:text-base">Password</label>
+            <input class="border-2 border-gray-100 hover:border-gray-300 hover:bg-gray-100 bg-white text-sm md:text-base p-2 rounded focus:logo-bg" type="text" id="password" name="password" />
+            <div class="flex justify-between my-2">
+                <div>
+                    <input type="checkbox" class="form-checkbox text-orange-500 cursor-pointer" id="remember" name="" value="1" />
+                    <label for="remember" class="text-sm md:text-base"> Remember Me </label>
+                </div>
+                <a href="" class="logo-color font-bold text-sm md:text-base hover:logo-text">Forgot your password?</a>
+            </div>
+            <input class="logo-bg hover:logo-bg focus:logo-bg-button text-white font-bold py-2 rounded cursor-pointer" type="submit" value="Create account" />
+        </form>
+
+        <p class="text-center text-sm md:text-base">Already have an account? <a href="" class="logo-color hover:logo-text font-bold">Log in</a></p>
+    </section>
+</body>

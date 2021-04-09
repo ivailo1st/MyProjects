@@ -1,0 +1,19 @@
+{
+  "name": "swapcase",
+  "version": "1.0.0",
+  "description": "a case for swap language",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "npx tailwind build ./wwwroot/css/site.css -o ./wwwroot/css/output.css"
+  },
+  "author": "Ivaylo Georgiev",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "@tailwindcss/postcss7-compat": "^2.1.0",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0"
+  }
+}
